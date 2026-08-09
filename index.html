@@ -95,21 +95,6 @@ header.scrolled{background:rgba(7,14,26,.82);backdrop-filter:blur(16px);border-b
 .nav-links a{font-size:.92rem;color:var(--silver);font-weight:500;transition:color .2s}
 .nav-links a:hover{color:var(--white)}
 .nav-cta{display:none}
-.nav-links a.nav-hot,.mobile-menu a.nav-hot{color:var(--ice)}
-.nav-links a.nav-hot:hover{color:var(--white)}
-
-/* ---------- protection band ---------- */
-.pband{background:linear-gradient(180deg,var(--navy-2),var(--navy));border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.pband .wrap{padding-top:64px;padding-bottom:64px;display:grid;gap:28px;grid-template-columns:1fr;align-items:center}
-@media(min-width:860px){.pband .wrap{grid-template-columns:1.35fr .65fr;gap:40px}}
-.pband h2{font-size:clamp(1.6rem,4vw,2.4rem);font-weight:700;margin:14px 0 12px}
-.pband h2 span{background:var(--gem);-webkit-background-clip:text;background-clip:text;color:transparent}
-.pband p{color:var(--silver);font-size:1rem;max-width:560px}
-.pband .prices{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
-.pband .prices span{font-family:'Sora';font-size:.8rem;font-weight:600;color:var(--silver);background:rgba(255,255,255,.04);border:1px solid var(--line);padding:7px 13px;border-radius:999px}
-.pband .prices b{color:var(--ice);font-weight:700}
-.pband .pcta{display:flex;flex-direction:column;gap:11px}
-.pband .pcta .btn{width:100%}
 .menu-btn{display:flex;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:8px}
 .menu-btn span{width:24px;height:2px;background:var(--platinum);border-radius:2px;transition:.3s}
 .mobile-menu{position:fixed;inset:74px 0 auto 0;background:rgba(7,14,26,.97);backdrop-filter:blur(20px);border-bottom:1px solid var(--line);padding:18px 22px 26px;display:none;flex-direction:column;gap:4px;z-index:89}
@@ -404,7 +389,7 @@ footer{background:var(--abyss);border-top:1px solid var(--line);padding:54px 0 3
     <nav class="nav-links">
       <a href="#services">Services</a>
       <a href="#pricing">Pricing</a>
-      <a href="protection.html" class="nav-hot">Ceramic Coating</a>
+      <a href="#quote">Instant Quote</a>
       <a href="#gallery">Results</a>
       <a href="#memberships">Memberships</a>
       <a href="#contact">Contact</a>
@@ -416,7 +401,6 @@ footer{background:var(--abyss);border-top:1px solid var(--line);padding:54px 0 3
 <nav class="mobile-menu" id="mobileMenu">
   <a href="#services">Services</a>
   <a href="#pricing">Pricing</a>
-  <a href="protection.html" class="nav-hot">Ceramic Coating &amp; Correction</a>
   <a href="#quote">Instant Quote</a>
   <a href="#gallery">Results</a>
   <a href="#memberships">Memberships</a>
@@ -436,8 +420,8 @@ footer{background:var(--abyss);border-top:1px solid var(--line);padding:54px 0 3
       <h1>Professional Mobile Detailing <span class="rev">Delivered To Your Door</span></h1>
       <p class="sub">I come to you for premium vehicle detailing that restores, refreshes, and revives your ride — at your home, office, apartment, or job site.</p>
       <div class="hero-cta">
-        <a href="#pricing" class="btn btn-primary">Maintain My Car</a>
-        <a href="protection.html" class="btn btn-ghost">Protect My Investment</a>
+        <a href="#quote" class="btn btn-primary">Get Instant Quote</a>
+        <a href="#book" class="btn btn-ghost">Book Appointment</a>
         <a href="tel:+16822626169" class="btn btn-outline">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="17" height="17"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
           Call Now
@@ -445,7 +429,7 @@ footer{background:var(--abyss);border-top:1px solid var(--line);padding:54px 0 3
       </div>
       <div class="hero-meta">
         <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> 100% Satisfaction Guarantee</span>
-        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> We Bring Everything</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> I Bring The Equipment</span>
       </div>
     </div>
   </div>
@@ -501,26 +485,6 @@ footer{background:var(--abyss);border-top:1px solid var(--line);padding:54px 0 3
           <li>Showroom-level revival</li>
         </ul>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== PROTECTION BAND — routes high-ticket buyers to protection.html ===== -->
-<section class="pband" id="protection">
-  <div class="wrap">
-    <div>
-      <span class="eyebrow">Ceramic Coating &amp; Paint Correction</span>
-      <h2>Keeping it clean is one thing. <span>Protecting it is another.</span></h2>
-      <p>A detail makes your car look new for a week. Paint correction removes the scratches in your clear coat permanently, and a ceramic coating keeps them from coming back for years. Every coating starts with a free paint inspection — I put a light on your paint and show you exactly what's there.</p>
-      <div class="prices">
-        <span>Diamond Shield &mdash; 2 yr &middot; <b>from $649</b></span>
-        <span>Diamond Armor &mdash; 5 yr &middot; <b>from $1,199</b></span>
-        <span>Diamond Signature &mdash; 7 yr &middot; <b>from $2,199</b></span>
-      </div>
-    </div>
-    <div class="pcta">
-      <a href="protection.html" class="btn btn-primary">See Coating Packages</a>
-      <a href="protection.html#inspect" class="btn btn-ghost">Book Free Paint Inspection</a>
     </div>
   </div>
 </section>
@@ -767,15 +731,15 @@ footer{background:var(--abyss);border-top:1px solid var(--line);padding:54px 0 3
   <div class="wrap">
     <div class="section-head reveal">
       <span class="eyebrow">Proof Of Work</span>
-      <h2>Before &amp; after the Diamond Revival</h2>
-      <p>Drag the slider to see the transformation. Swap these placeholders with your real job photos for maximum impact.</p>
+      <h2>Real results coming soon</h2>
+      <p>I'm building Diamond Revival one detail at a time. Check back soon for real before &amp; after results from vehicles right here in Fort Worth.</p>
     </div>
     <!-- Replace the .before / .after layer backgrounds with real photos:
          <img class="layer before" src="before.jpg" alt="Before detailing">
          <img class="layer after"  src="after.jpg"  alt="After detailing"> -->
     <div class="ba reveal" id="ba">
-      <div class="layer before">BEFORE — your photo here</div>
-      <div class="layer after">AFTER — your photo here</div>
+      <div class="layer before">REAL RESULTS COMING SOON</div>
+      <div class="layer after">CHECK BACK SOON</div>
       <span class="badge b1">Before</span>
       <span class="badge b2">After</span>
       <div class="handle" id="baHandle"></div>
@@ -866,37 +830,26 @@ footer{background:var(--abyss);border-top:1px solid var(--line);padding:54px 0 3
 <section class="section" id="reviews">
   <div class="wrap">
     <div class="section-head reveal">
-      <span class="eyebrow">What Customers Say</span>
-      <h2>Trusted across Tarrant County</h2>
-      <p>Real reviews from real customers. See them all on Google — or leave your own.</p>
+      <span class="eyebrow">Your Car. Our Work.</span>
+      <h2>Earning your trust, one vehicle at a time</h2>
+      <p>We're a growing local detailing business focused on earning your trust one vehicle at a time. When you've had your detail, we'd be grateful if you left an honest review on Google.</p>
     </div>
 
     <!-- ============================================================
          GOOGLE REVIEWS WIDGET SLOT
-         When you get your Elfsight / Trustindex / EmbedSocial widget,
-         paste its embed code INSIDE the div below (between the comments),
-         then delete the .rev-grid sample cards underneath if you want.
+         When you have real reviews and get an Elfsight / Trustindex /
+         EmbedSocial widget, paste its embed code INSIDE the div below.
+         Until then, the honest placeholder card underneath stays up.
          ============================================================ -->
     <div id="google-reviews-widget" class="reveal">
-      <!-- PASTE WIDGET EMBED CODE HERE -->
+      <!-- PASTE WIDGET EMBED CODE HERE WHEN YOU HAVE REAL REVIEWS -->
     </div>
 
-    <!-- SAMPLE reviews — replace text/names with your real Google or Facebook reviews -->
+    <!-- Honest placeholder — no fabricated reviews. Remove this card once
+         real Google reviews are embedded in the widget slot above. -->
     <div class="rev-grid">
-      <div class="rev-card glint reveal">
-        <div class="stars">★★★★★</div>
-        <p>Showed up on time, did my truck right in my own driveway. Interior looks brand new — even got the dog hair out. Booking again.</p>
-        <div class="rev-who"><div class="av">M</div><div><b>Marcus T.</b><span>Saginaw, TX</span></div></div>
-      </div>
-      <div class="rev-card glint reveal">
-        <div class="stars">★★★★★</div>
-        <p>So convenient not having to drive anywhere. The Diamond Revival full detail made my SUV look better than the day I bought it.</p>
-        <div class="rev-who"><div class="av">J</div><div><b>Jasmine R.</b><span>Keller, TX</span></div></div>
-      </div>
-      <div class="rev-card glint reveal">
-        <div class="stars">★★★★★</div>
-        <p>Professional, friendly, and the price was fair. Did both our cars in one visit and gave us the multi-vehicle discount. Highly recommend.</p>
-        <div class="rev-who"><div class="av">D</div><div><b>David &amp; Lena P.</b><span>Fort Worth, TX</span></div></div>
+      <div class="rev-card glint reveal" style="grid-column:1/-1;text-align:center">
+        <p style="font-size:1.05rem">We're a growing local detailing business focused on earning your trust one vehicle at a time. Be one of our first reviews — book a detail, and if you love the result, share it on Google.</p>
       </div>
     </div>
 
@@ -925,15 +878,32 @@ footer{background:var(--abyss);border-top:1px solid var(--line);padding:54px 0 3
     <div class="section-head reveal" style="max-width:720px">
       <span class="eyebrow">Why Diamond Revival</span>
       <h2>A premium detail, brought to your door</h2>
-      <p>Locally owned and operated in Fort Worth. We bring the water, power, and professional-grade products — you just hand over the keys.</p>
+      <p>Locally owned and operated in Fort Worth. I bring the equipment, products, and detailing expertise directly to your driveway — all I need is access to your water and power.</p>
     </div>
     <!-- Update these numbers once you have real figures -->
     <div class="stats reveal">
       <div class="stat"><b>10+</b><span>Cities served across DFW</span></div>
       <div class="stat"><b>100%</b><span>Satisfaction guarantee</span></div>
-      <div class="stat"><b>4&nbsp;Days</b><span>Thu–Sun availability</span></div>
+      <div class="stat"><b>7&nbsp;Days</b><span>A week availability</span></div>
       <div class="stat"><b>$0</b><span>You travel — we come to you</span></div>
     </div>
+  </div>
+</section>
+
+<!-- ===== WHAT YOU'LL NEED ===== -->
+<section class="section" id="whatyouneed">
+  <div class="wrap">
+    <div class="section-head reveal" style="max-width:720px">
+      <span class="eyebrow">Simple Setup</span>
+      <h2>What you'll need</h2>
+      <p>Professional detailing without the shop price. I bring the equipment, products, and detailing expertise directly to your driveway — here's all I need on your end.</p>
+    </div>
+    <div class="stats reveal">
+      <div class="stat"><b>💧</b><span>Access to a standard outdoor water spigot</span></div>
+      <div class="stat"><b>⚡</b><span>Access to a standard electrical outlet</span></div>
+      <div class="stat"><b>🚗</b><span>Enough space to safely work around your vehicle</span></div>
+    </div>
+    <p class="reveal" style="text-align:center;margin-top:22px;color:var(--silver);font-size:1.02rem">I bring the detailing equipment and products. You provide the water and power.</p>
   </div>
 </section>
 
@@ -999,13 +969,7 @@ footer{background:var(--abyss);border-top:1px solid var(--line);padding:54px 0 3
         </a>
         <div class="contact-row">
           <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
-          <div><b>Hours</b>
-            <span style="display:block;margin-top:4px;line-height:2;font-size:.85rem">
-              Thu &amp; Fri &nbsp;8am – 7pm<br>
-              Sat &amp; Sun &nbsp;8am – 7pm<br>
-              <span style="color:var(--silver-2)">Mon – Wed &nbsp;Closed</span>
-            </span>
-          </div>
+          <div><b>Hours</b><span>Mon–Sat 8am–7pm &bull; Sun by appt.</span></div>
         </div>
         <div class="area-map">
           <h4>Service area</h4>
@@ -1040,8 +1004,6 @@ footer{background:var(--abyss);border-top:1px solid var(--line);padding:54px 0 3
       </div>
       <div class="foot-col">
         <h4>Services</h4>
-        <a href="protection.html">Ceramic Coating</a>
-        <a href="protection.html">Paint Correction</a>
         <a href="#services">Exterior Detailing</a>
         <a href="#services">Interior Detailing</a>
         <a href="#pricing">Full Detail Packages</a>
